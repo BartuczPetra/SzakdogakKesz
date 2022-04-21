@@ -1,0 +1,28 @@
+th {
+    background-color: black;
+    color: white;
+}
+
+.githublink,
+.oldallink {
+    color: red;
+}
+
+.sor {
+    margin: 5px;
+}
+
+button {
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container {
+    background-color: lightgrey;
+    padding: 10px;
+}
+
+.szakdolgozatoklistazasa {
+    padding: 10px;
+}
