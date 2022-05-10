@@ -1,5 +1,4 @@
 $(function() {
-    const tomb = [];
     let szakdogakVegpont = "/api/szakdogak";
     const token = $('meta[name="csrf-token"]').attr("content");
     const ajax = new Ajax(token);
@@ -25,7 +24,6 @@ $(function() {
 
     $(window).on("torolKattintas", (event) => {
         let adat = event.detail;
-        let szakdogakVegpont = "/api/szakdogak";
         ajax.deleteAjax(szakdogakVegpont, adat.id);
         ajax.getAjax(szakdogakVegpont, adatbeolvas);
     });
@@ -45,9 +43,7 @@ $(function() {
             oldallink: $("#oldallink").val(),
             githublink: $("#githublink").val(),
         };
-        let szakdogaVegpont = "/api/szakdogak";
-        ajax.postAjax(szakdogaVegpont, adat);
-        ajax.getAjax(szakdogaVegpont, adatbeolvas);
+        ajax.postAjax(szakdogakVegpont, adat);
+        ajax.getAjax(szakdogakVegpont, adatbeolvas);
     });
-
 });

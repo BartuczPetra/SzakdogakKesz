@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SzakdogaController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -28,7 +27,3 @@ require __DIR__ . '/auth.php';
 
 require __DIR__ . '/auth.php';
 
-Route::get('/api/szakdogak',[SzakdogaController::class, 'index']);
-Route::post('/api/szakdogak',[SzakdogaController::class, 'store']);
-Route::put('/api/szakdogak/{id}',[SzakdogaController::class, 'put']);
-Route::delete('/api/szakdogak/{id}',[SzakdogaController::class, 'delete']);

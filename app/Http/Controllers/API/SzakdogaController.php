@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Szakdoga;
 
@@ -24,8 +25,8 @@ class SzakdogaController extends Controller
         return Szakdoga::find($szakdogak->id);
     }
 
-    public function put($id){
-        $szakdoga=Szakdoga::where('id',$id);
+    public function put(Request $request,$id){
+        $szakdogak=Szakdoga::where('id',$id);
         $szakdogak->szakdoga_nev=$request->szakdoga_nev;
         $szakdogak->githublink=$request->githublink;
         $szakdogak->oldallink=$request->oldallink;
